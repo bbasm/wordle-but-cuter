@@ -107,6 +107,8 @@ main {
   text-transform: uppercase;
   border: 2px solid var(--grey);
   color: var(--text-color);
+  transition: color 50ms ease-in-out, background-color 300ms ease-in-out,
+    border-color 300ms ease-in-out;
 }
 
 .board-letter span {
