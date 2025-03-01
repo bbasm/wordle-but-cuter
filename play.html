@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Wordle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="game-container">
+        <div class="sky">
+            <div class="terrain line ">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line ">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+                <img src="assets/images/Blue2.png" width="32">
+              </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+      
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+      
+              <img src="assets/images/Blue2.png" width="32">
+              
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <div class="text">
+      
+              </div>
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+      
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <div class="red-mushroom">
+                <img src="assets/images/red-mushroom.png" class="red-mushroom">
+              </div>
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <div class="sunflower">
+                <img src="assets/images/sunflower.png">
+              </div>
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+            <div class="terrain line">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <div class="flowers">
+                <img src="assets/images/flowers.png" class="flower"">
+              </div>
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+              <img src="assets/images/Blue2.png" width="32">
+            </div>
+          </div>
+      
+          <div class="grass">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+            <img src="assets/images/grass_block.png" width="32">
+          </div>
+      
+          <div class="all-dirt">
+            <div class="dirt">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+            </div>
+            <div class="dirt">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+              <img src="assets/images/dirt_block.png" width="32">
+            </div>
+          </div>
+        </div>
+
+
+        <div id="board">
+        </div>
+        <h1 id="answer"></h1>
+
+        <div class="bottom-space"></div>
+
+</body>
+
+</html>

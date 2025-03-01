@@ -1,225 +1,163 @@
-/* variables for colors etc */
-:root {
-  --bg-color: #fff;
-  --header-bg-color: #f9f9f9;
-  --modal-bg-color: rgba(255, 255, 255, 0.8);
-  --grey: #ddd;
-  --grey-hover: #aaa;
-  --text-color: #000;
-  --correct-color: #15a760;
-  --absent-color: #878787;
-  --present-color: #c8a91f;
-  --gap: 4px;
-}
-
-/* change colors for dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #111;
-    --header-bg-color: #242424;
-    --modal-bg-color: rgba(0, 0, 0, 0.8);
-    --grey: #333;
-    --grey-hover: #222;
-    --text-color: #fff;
-  }
-}
-
-/* keyframes for shake animation */
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  75% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-html,
 body {
-  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow: hidden;
   height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  background-color: var(--bg-color);
-  font-family: 'Poppins', sans-serif;
-  display: grid;
-  grid-template-rows: 60px 1fr;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-header {
+#board {
+  width: 350px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -100px;
+}
+
+
+.tile, .correct, .present, .absent {
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
+.tile {
+  /* Box */
+  width: 60px;
   height: 60px;
+  margin: 2.5px;
+  background-color: #FEF6E4;
+
+  /* Text */
+  color: black;
+  font-size: 36px;
+  /* font-weight: bold; */
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: var(--header-bg-color);
-  border-bottom: 1px solid var(--grey);
-}
-
-header h1 {
-  font-family: 'Source Serif Pro', serif;
-  font-size: 2rem;
-  color: var(--text-color);
-}
-
-main {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  row-gap: 40px;
-  padding: 16px;
 }
 
-/* word board */
-.word-board,
-#keyboard {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: var(--gap);
+.correct {
+  background-color: #B3E9AA;
+  color: black;
+  border-color: black;
 }
 
-.board-row,
-.keyboard-row {
-  display: flex;
-  column-gap: var(--gap);
+.present {
+  background-color: #FFF6AE;
+  color: black;
+  border-color: black;
 }
 
-.board-letter {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
-  border: 2px solid var(--grey);
-  color: var(--text-color);
-  transition: color 50ms ease-in-out, background-color 300ms ease-in-out,
-    border-color 300ms ease-in-out;
-}
-
-.board-letter span {
-  transition: all 300ms ease-in-out;
-  opacity: 0;
-  transform: scale(0.5);
-}
-
-.board-letter .letter-enter {
-  opacity: 1;
-  transform: scale(1);
+.absent {
+  background-color: #FFC0D9;
+  color: black;
+  border-color: black;
 }
 
 .keyboard-row {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30px, auto));
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.board-row.shake {
-  animation: shake 100ms linear infinite;
+.key-tile {
+  width: 36px;
+  height: 40px;
+  margin: 1px;
+  border: 1px solid lightgray;
+  background-color: #FEF6E4;
+
+  /* Text */
+  font-size: 20px;
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.keyboard-letter {
-  height: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--text-color);
-  cursor: pointer;
-  background-color: var(--grey);
-  border: none;
-  border-radius: 4px;
-  transition: background-color 300ms ease-in-out;
+.enter-key-tile {
+  width: 76px;
+  height: 40px;
+  margin: 1px;
+  border: 1px solid lightgray;
+  background-color: #FEF6E4;
+
+  /* Text */
+  font-size: 20px;
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.keyboard-letter:hover {
-  background-color: var(--grey-hover);
+@media (max-width: 600px) {
+
+  
+  .keyboard-row {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .key-tile, .enter-key-tile {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
 }
 
-/* correct / absent / present */
-.letter-correct,
-.letter-absent,
-.letter-present {
-  color: #fff;
-}
-
-.letter-absent {
-  background-color: var(--absent-color);
-  border-color: var(--absent-color);
-}
-
-.letter-present {
-  background-color: var(--present-color);
-  border-color: var(--present-color);
-}
-
-.letter-correct {
-  background-color: var(--correct-color);
-  border-color: var(--correct-color);
-}
-
-/* result modal */
-#result-modal {
+#game-container {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: -1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#answer {
+  font-weight: 500;
+}
+
+.sunflower {
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--modal-bg-color);
-  color: var(--text-color);
-  transition: all 500ms ease-in-out;
+  float: left
 }
 
-#result-modal.hidden {
-  opacity: 0;
-  pointer-events: none;
+.sunflower img {
+  z-index: 2;
+  position: absolute;
+  width: 130px;
+  height: auto;
+  padding-bottom: 15px;
 }
 
-#result-text {
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: center;
-}
 
-.secret-word-container {
-  font-size: 0.75rem;
-  text-align: center;
-  margin: 16px 32px;
-}
 
-#secret-word {
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-#play-again {
-  border: none;
-  border-radius: 8px;
-  padding: 16px 32px;
-  background-color: var(--correct-color);
-  color: var(--text-color);
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 300ms ease-in-out;
-}
-
-#play-again:hover {
-  background-color: #097c44;
+@media only screen and (max-width: 600px) {
+  .sunflower img {
+      width: 110px;
+      height: auto;
+      padding-bottom: 15px;
+      padding-left: 80px;
+  }
 }
