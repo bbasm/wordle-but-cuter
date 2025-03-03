@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="menu_style.css" />
 
   <!-- Google Font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -545,8 +545,40 @@
             <div class="pink-flower-img">
               <img src="assets/images/pink-flower.png" >
             </div>
-            
+            <p class="popup-explanation">The color of the tiles will change to show how close your guess was to the word.</p>
           </div>
+
+          <div id="example">Example</div>
+          <div class="ex-word">
+            <div class="ex-tile correct">
+              <p class="text-tile">W</p>
+            </div>
+  
+            <div class="ex-tile absent">
+              <p class="text-tile">O</p>
+            </div>
+  
+            <div class="ex-tile absent">
+              <p class="text-tile">R</p>
+            </div>
+  
+            <div class="ex-tile present">
+              <p class="text-tile">D</p>
+            </div>
+  
+            <div class="ex-tile correct">
+              <p class="text-tile">Y</p>
+            </div>
+          </div>
+
+          <div class="example-explanation">
+            <div class="word-explanation"><b>W</b> and <b>Y</b> is in the word and in the correct spot</div>
+            <div class="word-explanation"><b>D</b> is in the word and but in the wrong spot</div>
+            <div class="word-explanation"><b>O</b> and <b>R</b> is not in the word in any spot</div>  
+          </div>
+
+          <div id="space"></div>
+          
       </div>
     </div>
 

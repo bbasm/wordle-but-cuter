@@ -2,7 +2,8 @@
     font-size: 0;
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -201,7 +202,7 @@ button:active {
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.3);
     z-index: 1;
     display: none;
@@ -214,7 +215,7 @@ button:active {
     transform: translate(-50%, -50%) scale(0);
     background-color: #FEF6E4;
     width: 450px;
-    height: 220px;
+    height: 370px;
     z-index: 2;
     text-align: center;
     padding: 20px;
@@ -266,9 +267,69 @@ button:active {
     display: flex;
 }
 
+
 .popup-explanation {
     padding-left: 10px;
 }
+
+.ex-tile {
+    width: 40px;
+    height: 40px;
+    margin: 2.5px;
+    background-color: #FEF6E4;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-tile {
+    margin: 0;
+    text-align: center;
+
+}
+
+.ex-word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.word-explanation {
+    font-family: "Poppins", serif;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.correct {
+    background-color: #B3E9AA;
+    color: black;
+    border-color: black;
+}
+
+.present {
+    background-color: #FFF6AE;
+    color: black;
+    border-color: black;
+}
+
+.absent {
+    background-color: #FFC0D9;
+    color: black;
+    border-color: black;
+}
+
+#example {
+    font-weight: 600;
+    font-family: "Poppins", serif;
+    margin-top: -2px;
+    margin-bottom: 8px;
+}
+
+
+
 
 
 
@@ -278,7 +339,7 @@ button:active {
     .wordle {
         font-size: 65px;
     }
-} 
+}
 
 @media only screen and (max-width: 600px) {
     .wordle {
@@ -349,4 +410,16 @@ button:active {
         height: auto;
     }
 
+}
+
+@media only screen and (max-width: 555px) {
+    .popup .content {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    .popup .content {
+        width: 350px;
+    }
 }
