@@ -6,11 +6,12 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -26,7 +27,10 @@ html, body {
 }
 
 
-.tile, .correct, .present, .absent {
+.tile,
+.correct,
+.present,
+.absent {
   border: 1px solid black;
   border-radius: 1px;
 }
@@ -66,7 +70,7 @@ html, body {
 }
 
 .keyboard-row {
-  width: 400px;
+  width: 510px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -74,8 +78,8 @@ html, body {
 }
 
 .key-tile {
-  width: 36px;
-  height: 40px;
+  width: 47px;
+  height: 60px;
   margin: 1px;
   border: 1px solid lightgray;
   background-color: #FEF6E4;
@@ -89,8 +93,8 @@ html, body {
 }
 
 .enter-key-tile {
-  width: 76px;
-  height: 40px;
+  width: 90px;
+  height: 58px;
   margin: 1px;
   border: 1px solid lightgray;
   background-color: #FEF6E4;
@@ -103,27 +107,13 @@ html, body {
   align-items: center;
 }
 
-@media (max-width: 600px) {
-
-  
-  .keyboard-row {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .key-tile, .enter-key-tile {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-}
-
 #game-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
   background: rgba(255, 255, 255, 0.8);
   z-index: -1;
   display: flex;
@@ -132,8 +122,18 @@ html, body {
   align-items: center;
 }
 
+
+.keyboard-container {
+  padding-top: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #answer {
   font-weight: 500;
+  margin: 20px auto; 
 }
 
 .sunflower {
@@ -152,12 +152,103 @@ html, body {
 }
 
 
+@media (max-width: 600px) {
+  /* .keyboard-row {
+    width: 100%;
+    max-width: 350px;
+  }
 
-@media only screen and (max-width: 600px) {
+  .key-tile {
+    width: 30px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .enter-key-tile {
+    width: 65px;
+    height: 40px;
+  } */
+
   .sunflower img {
-      width: 110px;
-      height: auto;
-      padding-bottom: 15px;
-      padding-left: 80px;
+    width: 110px;
+    height: auto;
+    padding-bottom: 15px;
+    padding-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .keyboard-row {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .key-tile {
+    width: 40px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .enter-key-tile {
+    width: 65px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .keyboard-row {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .key-tile {
+    width: 38px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .enter-key-tile {
+    width: 65px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .keyboard-row {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .key-tile {
+    width: 35px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .enter-key-tile {
+    width: 65px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .keyboard-row {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .key-tile {
+    width: 32px;
+    height: 55px;
+    font-size: 15px;
+  }
+
+  .enter-key-tile {
+    width: 65px;
+    height: 40px;
+    font-size: 15px;
   }
 }
