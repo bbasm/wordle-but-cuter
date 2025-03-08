@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 1;
   display: none;
 }
 
@@ -18,7 +18,7 @@
   background-color: #FEF6E4;
   width: 430px;
   height: 370px;
-  z-index: 11;
+  z-index: 2;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
@@ -285,7 +285,8 @@ body {
 
 
 .keyboard-container {
-  padding-top: 40px;
+  /* THIS IS THE TOP PADDING */
+  padding-top: 60px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -295,6 +296,160 @@ body {
 #answer {
   font-weight: 500;
   margin: 20px auto;
+}
+
+.refresh-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1.5px solid black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+}
+
+.refresh-container, .menu-container {
+  background-color: #FFD5E5;
+}
+
+.menu-container {
+  width: 60px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1.5px solid black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  font-size: 14px;
+}
+
+.icon-img {
+  width: 20px;
+  height: auto;
+  margin: 0;
+}
+
+.icon-containers {
+  display: flex;
+  position: fixed;
+  top: 10px;
+  left: calc(32%);
+}
+
+@media only screen and (max-width: 1290px) {
+  .icon-containers {
+    left: calc(30%);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .icon-containers {
+    left: calc(27%);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .icon-containers {
+    left: calc(24%);
+  }
+
+  .winner .content {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .icon-containers {
+    left: calc(21%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .icon-containers {
+    left: calc(18%);
+  }
+
+  .winner .content {
+    width: 380px;
+  }
+
+  .looser-title {
+    font-size: 22px;
+  }
+  
+  .winner-title {
+    font-size: 20px;
+  }
+
+  .heart-answer img {
+    width: 50px;
+    height: auto;
+  }
+
+  .main-menu, .play-again {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-containers {
+    left: calc(15%);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .icon-containers {
+    left: calc(12%);
+  }
+
+  .winner .content {
+    width: 350px;
+  }
+
+  .heart-answer img {
+    width: 50px;
+    height: auto;
+  }
+
+  .main-menu, .play-again {
+    width: 165px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .icon-containers {
+    left: calc(9%);
+  }
+
+  .winner .content {
+    width: 320px;
+  }
+
+  .heart-answer img {
+    width: 50px;
+    height: auto;
+  }
+
+  .main-menu, .play-again {
+    width: 160px;
+  }
+  
+  .cats-answer img {
+    width: 50px;
+    margin-left: 5px;
+  }
+
+  .winner-title {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 535px) {
