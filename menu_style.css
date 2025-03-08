@@ -100,13 +100,13 @@ body {
     padding: 0;
 }
 
-button p {
+.index-button p {
     color: black;
     margin: 0;
 }
 
 
-button {
+.index-button {
     font-family: "Press Start 2P", serif;
     z-index: 1;
     position: absolute;
@@ -128,8 +128,7 @@ button {
 }
 
 
-button:active {
-
+.index-button:active {
     background-color: #FEF6E4;
     box-shadow: 0 2px #666;
     margin-top: 2px;
@@ -262,6 +261,10 @@ button:active {
     transform: translate(-50%, -50%) scale(1);
 }
 
+.popup-explanation {
+    padding-left: 10px;
+}
+
 .pink-flower-img img {
     width: 35px;
 }
@@ -270,10 +273,13 @@ button:active {
     display: flex;
 }
 
-
-.popup-explanation {
-    padding-left: 10px;
+.word-explanation {
+    font-family: "Poppins", serif;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 8px;
 }
+
 
 .ex-tile {
     width: 40px;
@@ -296,13 +302,6 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
-}
-
-.word-explanation {
-    font-family: "Poppins", serif;
-    text-align: center;
-    font-size: 12px;
     margin-bottom: 8px;
 }
 
@@ -349,7 +348,7 @@ button:active {
         font-size: 60px;
     }
 
-    button {
+    .index-button {
         font-family: "Press Start 2P", serif;
         z-index: 1;
         position: absolute;
@@ -419,3 +418,157 @@ button:active {
         width: 350px;
     }
 }
+
+
+
+/* .winner .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: none;
+}
+
+.winner .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #FEF6E4;
+    width: 430px;
+    height: 370px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    border: 2px black solid;
+}
+
+.winner .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.winner.active .overlay {
+    display: block;
+}
+
+.winner.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.winner-title {
+    padding-top: 20px;
+    font-family: "Press Start 2P", serif;
+    font-size: 22px;
+}
+
+.looser-title {
+    padding-top: 15px;
+    font-family: "Press Start 2P", serif;
+    font-size: 24px;
+}
+
+.winner .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.answer-box {
+    border: 1.5px black solid;
+    font-family: "Press Start 2P", serif;
+    font-size: 13px;
+    width: 170px;
+    height: 48px;
+    margin: auto;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-again {
+    font-family: "Press Start 2P", serif;
+    font-size: 12px;
+    margin-top: 50px;
+    border: 1.5px black solid;
+    border-radius: 9px;
+    height: 40px;
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu {
+    font-family: "Press Start 2P", serif;
+    font-size: 12px;
+    margin-top: 5px;
+    border: 1.5px black solid;
+    border-radius: 9px;
+    height: 40px;
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-answer img {
+    width: 60px;
+    height: auto;
+}
+
+.heart-answer {
+    position: absolute;
+    z-index: 2;
+    left: calc(32%);
+    top: calc(28%);
+    transform: translateX(-50%);
+}
+
+.cats-answer img {
+    width: 65px;
+    height: auto;
+    padding-bottom: 17px;
+}
+
+.cats-answer {
+    position: absolute;
+    left: calc(78%);
+    top: calc(70%);
+    z-index: 2;
+} */

@@ -1,6 +1,175 @@
+.winner .overlay {
+  /* position: fixed; */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: none;
+}
+
+.winner .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #FEF6E4;
+  width: 430px;
+  height: 370px;
+  z-index: 11;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  border: 2px black solid;
+}
+
+.winner .close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.winner.active .overlay {
+  display: block;
+}
+
+.winner.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.winner-title {
+  padding-top: 20px;
+  font-family: "Press Start 2P", serif;
+  font-size: 22px;
+}
+
+.looser-title {
+  padding-top: 5px;
+  font-family: "Press Start 2P", serif;
+  font-size: 24px;
+}
+
+.winner .close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.answer-box {
+  border: 1.5px black solid;
+  font-family: "Press Start 2P", serif;
+  font-size: 13px;
+  /* border-radius: 5px; */
+  width: 170px;
+  height: 48px;
+  margin: auto;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-again {
+  /* font-family: "Press Start 2P", serif; */
+  font-size: 17px;
+  margin-top: 40px;
+  border: 1.5px black solid;
+  border-radius: 9px;
+  height: 40px;
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-menu {
+  /* font-family: "Press Start 2P", serif; */
+  font-size: 17px;
+  margin-top: 5px;
+  border: 1.5px black solid;
+  border-radius: 9px;
+  height: 40px;
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-button {
+  cursor: pointer;
+}
+
+.popup-button:active {
+  box-shadow: 0 2px #666;
+  transform: translate(5px, 2px);
+} 
+
+.button-text {
+  font-size: 15px;
+  font-family: "Poppins", serif;
+  margin: 0;
+}
+
+.heart-answer img {
+  width: 60px;
+  height: auto;
+}
+
+.heart-answer {
+  position: absolute;
+  z-index: 2;
+  left: calc(32%);
+  top: calc(32%);
+  transform: translateX(-50%);
+}
+
+.cats-answer img {
+  width: 65px;
+  height: auto;
+  padding-bottom: 17px;
+}
+
+.cats-answer {
+  position: absolute;
+  left: calc(78%);
+  top: calc(70%);
+  z-index: 2;
+}
+
 html,
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", serif;
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
@@ -103,9 +272,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw; 
+  width: 100vw;
   height: auto;
-  overflow-y: auto; 
+  overflow-y: auto;
   background: rgba(255, 255, 255, 0.8);
   z-index: -1;
   display: flex;
@@ -125,7 +294,7 @@ body {
 
 #answer {
   font-weight: 500;
-  margin: 20px auto; 
+  margin: 20px auto;
 }
 
 @media only screen and (max-width: 535px) {
