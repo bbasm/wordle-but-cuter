@@ -1,5 +1,4 @@
 .winner .overlay {
-  /* position: fixed; */
   position: fixed;
   top: 0px;
   left: 0px;
@@ -77,11 +76,78 @@
   border-radius: 50%;
 }
 
+.not-in-list {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.not-in-list.active {
+  display: block;
+}
+
+.not-in-list .overlay-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+}
+
+.not-in-list .content-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FEF6E4;
+  border: 1px solid black;
+  width: 250px;
+  height: 80px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 999;
+  box-sizing: border-box;
+
+}
+
+.not-found {
+  font-size: 18px;
+}
+
+.try-diff {
+  font-size: 14px;
+}
+
+.not-in-list p {
+  margin: 0;
+}
+
+.not-list-text {
+  margin-top: 10px;
+}
+
+.content-list {
+  z-index: 5;
+}
+
+.not-in-list.active .overlay-list {
+  display: block;
+}
+
+.not-in-list.active .overlay-list {
+  transition: all 100ms ease-in;
+}
+
 .answer-box {
   border: 1.5px black solid;
   font-family: "Press Start 2P", serif;
   font-size: 13px;
-  /* border-radius: 5px; */
   width: 170px;
   height: 48px;
   margin: auto;
@@ -133,7 +199,7 @@
 .popup-button:active {
   box-shadow: 0 2px #666;
   transform: translate(5px, 2px);
-} 
+}
 
 .button-text {
   font-size: 15px;
@@ -286,7 +352,7 @@ body {
 
 .keyboard-container {
   /* THIS IS THE TOP PADDING */
-  padding-top: 60px;
+  padding-top: 51px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -312,7 +378,8 @@ body {
   flex-flow: column;
 }
 
-.refresh-container, .menu-container {
+.refresh-container,
+.menu-container {
   background-color: #FFD5E5;
 }
 
@@ -341,7 +408,7 @@ body {
   display: flex;
   position: fixed;
   top: 10px;
-  left: calc(32%);
+  left: calc(33%);
 }
 
 @media only screen and (max-width: 1290px) {
@@ -384,7 +451,7 @@ body {
   .looser-title {
     font-size: 22px;
   }
-  
+
   .winner-title {
     font-size: 20px;
   }
@@ -394,7 +461,8 @@ body {
     height: auto;
   }
 
-  .main-menu, .play-again {
+  .main-menu,
+  .play-again {
     width: 180px;
   }
 }
@@ -419,7 +487,8 @@ body {
     height: auto;
   }
 
-  .main-menu, .play-again {
+  .main-menu,
+  .play-again {
     width: 165px;
   }
 }
@@ -438,10 +507,11 @@ body {
     height: auto;
   }
 
-  .main-menu, .play-again {
+  .main-menu,
+  .play-again {
     width: 160px;
   }
-  
+
   .cats-answer img {
     width: 50px;
     margin-left: 5px;

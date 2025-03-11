@@ -33,6 +33,10 @@ function toggleLooser(answer) {
     document.getElementById("looser-1").classList.toggle("active");
 }
 
+function notInList() { 
+    document.getElementById("not-in-list-1").classList.toggle("active");
+}
+
 window.onload = function(){
     intialize();
 }
@@ -130,6 +134,7 @@ function processInput(e) {
     }
 }
 
+
 function update() {
     let guess = "";
     document.getElementById("answer").innerText = "";
@@ -140,12 +145,30 @@ function update() {
         guess += letter;
     }
 
-    guess = guess.toLowerCase(); // Case sensitive
+    guess = guess.toLowerCase();
     console.log(guess);
 
-    if (!guessList.includes(guess)) {
-        document.getElementById("answer").innerText = "Not in word list";
+    document.getElementById("not-in-list-1").classList.remove("active");
+
+    if (guess.length !== 5) {
+        console.log("Please enter a 5-letter word.");
         return;
+    }
+
+    if (!guessList.includes(guess)) {
+        console.log("Word not in list, showing overlay.");
+        
+        const notInListOverlay = document.getElementById("not-in-list-1");
+        notInListOverlay.classList.add("active");
+
+        setTimeout(() => {
+            notInListOverlay.classList.remove("active");
+        }, 1500);
+
+        return;
+    } else {
+        console.log("Word is valid, hiding overlay.");
+        document.getElementById("not-in-list-1").classList.remove("active");
     }
 
     let correct = 0;
@@ -166,7 +189,7 @@ function update() {
             let keyTile = document.getElementById("Key" + letter);
             keyTile.classList.remove("present");
             keyTile.classList.add("correct");
-            keyTile.style.backgroundColor = "#B3E9AA"; // Green
+            keyTile.style.backgroundColor = "#B3E9AA";
 
             correct += 1;
             letterCount[letter] -= 1;
@@ -184,31 +207,29 @@ function update() {
                 let keyTile = document.getElementById("Key" + letter);
                 if (!keyTile.classList.contains("correct")) {
                     keyTile.classList.add("present");
-                    keyTile.style.backgroundColor = "#FFF6AE"; // Yellow
+                    keyTile.style.backgroundColor = "#FFF6AE";
                 }
                 letterCount[letter] -= 1;
             } else {
                 currTile.classList.add("absent");
                 let keyTile = document.getElementById("Key" + letter);
                 keyTile.classList.add("absent");
-                keyTile.style.backgroundColor = "#FFC0D9"; // Pink
+                keyTile.style.backgroundColor = "#FFC0D9";
             }
         }
     }
 
-    // **Check if user won**
     if (correct === width) {
         gameOver = true;
         setTimeout(() => {
             toggleWinner(word);
-        }, 500); // Small delay to show the last tile update
+        }, 500);
         return;
     }
 
     row += 1;
     col = 0;
 
-    // **Check if user lost after 6 tries**
     if (row === height) {
         gameOver = true;
         setTimeout(() => {
