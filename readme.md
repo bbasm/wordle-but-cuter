@@ -1,9 +1,15 @@
-# Wordle Clone | WebDevASMR
+# Wordle but Cuter
 
-Develop a Wordle clone using HTML, CSS, and JavaScript in this ASMR Programming tutorial.
+Main Wordle code came from this link. https://github.com/WebDevASMR/2023-04-28-Wordle-Clone.
 
-[Watch the video here:](https://youtu.be/MoYswcVQprM?sub_confirmation=1)
-[![YouTube](./thumbnail.jpg)](https://youtu.be/MoYswcVQprM?sub_confirmation=1)
+I added the decorations to the site and made the overall game experience flow better
+
+
+## Game Assets
+
+Game assets came from itch.io free assets listed below:
+- https://pixelfrog-assets.itch.io/pixel-adventure-1
+- https://cupnooble.itch.io/sprout-lands-asset-pack
 
 ## API
 
